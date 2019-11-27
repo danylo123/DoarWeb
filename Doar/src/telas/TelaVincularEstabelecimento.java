@@ -8,11 +8,15 @@ package telas;
 import estabelecimento.Estabelecimento;
 import estabelecimento.EstabelecimentoDAO;
 import estabelecimento.EstabelecimentoTableModel;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import usuario.Usuario;
+import usuario.UsuarioDAO;
+import usuario.UsuarioTableModel;
 
 /**
  *
- * @author Danylo
+ * @author LABORATORIO 01
  */
 public class TelaVincularEstabelecimento extends javax.swing.JFrame {
 
@@ -26,8 +30,6 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
         tela.setVisible(false); // Tornar a tela que chamou invisivel
         atualizarTabela();
     }
-
-  
 
     public void atualizarTabela() {
         EstabelecimentoTableModel tm = new EstabelecimentoTableModel(dao.listarEstabelecimentos());
@@ -47,27 +49,13 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btSelecionar = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaEstabelecimento = new javax.swing.JTable();
+        btSelecionar = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        btSelecionar.setText("Selecionar");
-        btSelecionar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btSelecionarActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Voltar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Vincular Estabelecimento");
@@ -90,6 +78,20 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaEstabelecimento);
 
+        btSelecionar.setText("Selecionar");
+        btSelecionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSelecionarActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Voltar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,9 +107,9 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
                                 .addComponent(btSelecionar))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(94, 94, 94)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,12 +122,17 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btSelecionar)
                     .addComponent(jButton4))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        tela.setVisible(true); // Deixa a tela visivel
+        dispose(); // Fecha a tela atual
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void btSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSelecionarActionPerformed
         int linha = tabelaEstabelecimento.getSelectedRow();
@@ -138,11 +145,6 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
             dispose();
         }
     }//GEN-LAST:event_btSelecionarActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        tela.setVisible(true); // Deixa a tela visivel
-        dispose(); // Fecha a tela atual
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void tabelaEstabelecimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaEstabelecimentoMouseClicked
         if (evt.getClickCount() == 2) {
@@ -176,11 +178,14 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaVincularEstabelecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaVincularEstabelecimento().setVisible(true);
+                new TelaVincularEstabelecimento(null).setVisible(true);
             }
         });
     }

@@ -9,7 +9,7 @@ import estabelecimento.Estabelecimento;
 public class EstabelecimentoTableModel extends AbstractTableModel {
 
     private List<Estabelecimento> estabelecimentos = new ArrayList<>();
-    private String[] colunas = {"Nome", "Rua", "Bairro", "Cidade"};
+    private String[] colunas = {"Código", "Nome", "Rua", "Bairro", "Cidade"};
 
     public EstabelecimentoTableModel(List<Estabelecimento> estabelecimentos) {
         this.estabelecimentos = estabelecimentos;
@@ -30,13 +30,15 @@ public class EstabelecimentoTableModel extends AbstractTableModel {
         Estabelecimento estabelecimento = estabelecimentos.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return estabelecimento.getNomeEstabelecimento();
+                return estabelecimento.getIdEstabelecimento();
             case 1:
-                return estabelecimento.getRuaEstabelecimento();
+                return estabelecimento.getNomeEstabelecimento();
             case 2:
-                return estabelecimento.getBairroEstabelecimento();
+                return estabelecimento.getRuaEstabelecimento();
             case 3:
-                return estabelecimento.getCidadeEstabelecimento();            
+                return estabelecimento.getBairroEstabelecimento();
+            case 4:
+                return estabelecimento.getCidadeEstabelecimento();
         }
         return null;
     }
@@ -50,7 +52,7 @@ public class EstabelecimentoTableModel extends AbstractTableModel {
             case 2:
                 return colunas[2];
             case 3:
-                return colunas[3];            
+                return colunas[3];
         }
         return null;
     }

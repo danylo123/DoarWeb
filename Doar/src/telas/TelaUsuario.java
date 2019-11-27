@@ -9,6 +9,7 @@ import estabelecimento.Estabelecimento;
 import javax.swing.JOptionPane;
 import usuario.Usuario;
 import usuario.UsuarioDAO;
+import estabelecimento.Estabelecimento;
 
 /**
  *
@@ -247,7 +248,7 @@ public class TelaUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_tfNomeEstabelecimentoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaVincularEstabelecimento tela = new TelaVincularEstabelecimento();
+        TelaVincularEstabelecimento tela = new TelaVincularEstabelecimento(this);
         tela.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -276,7 +277,9 @@ public class TelaUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        
+        TelaPesquisaUsuario tela = new TelaPesquisaUsuario();
+        this.setVisible(true);
+        dispose();        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void tfEmailUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEmailUsuarioActionPerformed

@@ -23,13 +23,13 @@ public class Usuario {
     @GeneratedValue
     private int idUsuario;
     
-    @Column(length = 20, nullable = false)
+    @Column(length = 50, nullable = false)
     private String nomeUsuario;
     
-    @Column(length = 20, nullable = false)
+    @Column(length = 11, nullable = false)
     private String cpfUsuario;
     
-    @Column(length = 20, nullable = false)
+    @Column(length = 50, nullable = false)
     private String emailUsuario;
     
     @Column(length = 20, nullable = false)

@@ -17,16 +17,15 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
 
     Estabelecimento estabelecimento;
     EstabelecimentoDAO estabelecimentoDAO;
-    
-    
+
     public TelaEstabelecimento() {
         initComponents();
-        
+
         estabelecimento = new Estabelecimento();
         estabelecimentoDAO = new EstabelecimentoDAO();
     }
-    
-     public void limparCampos() {
+
+    public void limparCampos() {
         estabelecimento = new Estabelecimento();
         tfNomeEstabelecimento.setText("");
         tfRuaEstabelecimento.setText("");
@@ -34,8 +33,14 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
         tfBairroEstabelecimento.setText("");
         tfCidadeEstabelecimento.setText("");
     }
-     
-    
+
+    public void preencherEstabelecimento() {
+        tfNomeEstabelecimento.setText(estabelecimento.getNomeEstabelecimento());
+        tfRuaEstabelecimento.setText(estabelecimento.getRuaEstabelecimento());
+        tfNumeroEstabelecimento.setText(estabelecimento.getNomeEstabelecimento());
+        tfBairroEstabelecimento.setText(estabelecimento.getBairroEstabelecimento());
+        tfCidadeEstabelecimento.setText(estabelecimento.getCidadeEstabelecimento());
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -233,7 +238,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if (!tfNomeEstabelecimento.getText().isEmpty() && !tfRuaEstabelecimento.getText().isEmpty()
                 && !tfNumeroEstabelecimento.getText().isEmpty() && !tfCidadeEstabelecimento.getText().isEmpty()) {
-            
+
             estabelecimento.setNomeEstabelecimento(tfNomeEstabelecimento.getText());
             estabelecimento.setRuaEstabelecimento(tfRuaEstabelecimento.getText());
             estabelecimento.setNumeroEstabelecimento(tfNumeroEstabelecimento.getText());
@@ -247,7 +252,9 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        
+        TelaPesquisaEstabelecimento tela = new TelaPesquisaEstabelecimento();
+        this.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void tfRuaEstabelecimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfRuaEstabelecimentoActionPerformed
@@ -320,7 +327,4 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
     private javax.swing.JTextField tfRuaEstabelecimento;
     // End of variables declaration//GEN-END:variables
 
-    
-
-    
 }
