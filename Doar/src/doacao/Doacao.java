@@ -10,8 +10,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import usuario.Usuario;
 
 /**
  *
@@ -41,6 +43,9 @@ public class Doacao {
     
     @Column(length = 1, nullable = false)
     private int statusDoacao;
+    
+    @OneToOne
+    private Usuario usuario;
 
     /**
      * @return the idDoacao
@@ -138,6 +143,20 @@ public class Doacao {
      */
     public void setStatusDoacao(int statusDoacao) {
         this.statusDoacao = statusDoacao;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
         
 }

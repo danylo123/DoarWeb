@@ -5,28 +5,31 @@
  */
 package telas;
 
+import doacao.Doacao;
+import doacao.DoacaoDAO;
+import doacao.DoacaoTableModel;
 import javax.swing.JOptionPane;
-import usuario.Usuario;
-import usuario.UsuarioDAO;
-import usuario.UsuarioTableModel;
+import doacao.Doacao;
+import doacao.DoacaoDAO;
+import doacao.DoacaoTableModel;
 
 /**
  *
  * @author LABORATORIO 01
  */
-public class TelaPesquisaUsuario extends javax.swing.JFrame {
+public class TelaRealizarDoacao extends javax.swing.JFrame {
 
-    Usuario usuario = new Usuario();
-    UsuarioDAO dao = new UsuarioDAO();
+    Doacao doacao = new Doacao();
+    DoacaoDAO dao = new DoacaoDAO();
     
-    public TelaPesquisaUsuario() {
+    public TelaRealizarDoacao() {
         initComponents();
         atualizarTabela();
     }
     
     public void atualizarTabela(){
-        UsuarioTableModel tm = new UsuarioTableModel(dao.listarUsuarios());
-        tabelaUsuario.setModel(tm);
+        DoacaoTableModel tm = new DoacaoTableModel(dao.listarDoacaos());
+        tabelaDoacao.setModel(tm);
     }
 
     /**
@@ -40,26 +43,25 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        tfNomeUsuario = new javax.swing.JTextField();
+        tfNomeEstabelecimento = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelaUsuario = new javax.swing.JTable();
+        tabelaDoacao = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("Pesquisa Usuário");
+        jLabel2.setText("Pesquisa Estabelecimento");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nome:");
 
-        tfNomeUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        tfNomeUsuario.addActionListener(new java.awt.event.ActionListener() {
+        tfNomeEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tfNomeEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNomeUsuarioActionPerformed(evt);
+                tfNomeEstabelecimentoActionPerformed(evt);
             }
         });
 
@@ -70,7 +72,7 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
             }
         });
 
-        tabelaUsuario.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaDoacao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -81,19 +83,12 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tabelaUsuario);
+        jScrollPane1.setViewportView(tabelaDoacao);
 
-        jButton2.setText("Editar");
+        jButton2.setText("Doar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Excluir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
             }
         });
 
@@ -112,26 +107,24 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tfNomeUsuario)
+                .addComponent(tfNomeEstabelecimento)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4)
-                .addGap(185, 185, 185)
-                .addComponent(jButton3)
-                .addGap(18, 18, 18)
+                .addGap(241, 241, 241)
                 .addComponent(jButton2)
-                .addGap(75, 75, 75))
+                .addGap(100, 100, 100))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -142,14 +135,13 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(tfNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfNomeEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton3)
                     .addComponent(jButton4))
                 .addGap(27, 27, 27))
         );
@@ -158,41 +150,29 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfNomeUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeUsuarioActionPerformed
+    private void tfNomeEstabelecimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeEstabelecimentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfNomeUsuarioActionPerformed
+    }//GEN-LAST:event_tfNomeEstabelecimentoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         int linha = tabelaUsuario.getSelectedRow();
+         int linha = tabelaDoacao.getSelectedRow();
        if(linha == -1){
            JOptionPane.showMessageDialog(null, "Selecione uma linha!");
        }else{
-           usuario = dao.pesquisar((int) tabelaUsuario.getValueAt(linha, 0));
-           TelaUsuario tela = new TelaUsuario();
-           tela.usuario = usuario;
-           tela.preencherUsuario();
+           doacao = dao.pesquisar((int) tabelaDoacao.getValueAt(linha, 0));
+           TelaDoacao tela = new TelaDoacao();
+           tela.doacao = doacao;
+           tela.preencherDoacao();
            tela.setVisible(true);
            dispose();
        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        TelaUsuario tela = new TelaUsuario(); // Instancia a classe
+        TelaDoacao tela = new TelaDoacao(); // Instancia a classe
         tela.setVisible(true); // Deixa a tela visivel
         dispose(); // Fecha a tela atual
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       int linha = tabelaUsuario.getSelectedRow();
-       if(linha == -1){
-           JOptionPane.showMessageDialog(null, "Selecione uma linha!");
-       }else if(JOptionPane.showConfirmDialog(null, "Deseja realmente excluir este usuário? ", "Excluir usuário", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
-           usuario = dao.pesquisar((int) tabelaUsuario.getValueAt(linha, 0));
-           dao.excluir(usuario);
-           atualizarTabela();
-           JOptionPane.showMessageDialog(null, "Usuário excluído!");
-       }
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -215,21 +195,27 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPesquisaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRealizarDoacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPesquisaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRealizarDoacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPesquisaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRealizarDoacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPesquisaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRealizarDoacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPesquisaUsuario().setVisible(true);
+                new TelaRealizarDoacao().setVisible(true);
             }
         });
     }
@@ -237,12 +223,11 @@ public class TelaPesquisaUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabelaUsuario;
-    private javax.swing.JTextField tfNomeUsuario;
+    private javax.swing.JTable tabelaDoacao;
+    private javax.swing.JTextField tfNomeEstabelecimento;
     // End of variables declaration//GEN-END:variables
 }

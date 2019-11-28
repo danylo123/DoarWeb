@@ -43,7 +43,7 @@ public class TelaPesquisaEstabelecimento extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        tfLoginUsuario = new javax.swing.JTextField();
+        tfNomeEstabelecimento = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaEstabelecimento = new javax.swing.JTable();
@@ -57,12 +57,12 @@ public class TelaPesquisaEstabelecimento extends javax.swing.JFrame {
         jLabel2.setText("Pesquisa Estabelecimento");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Login:");
+        jLabel3.setText("Nome:");
 
-        tfLoginUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        tfLoginUsuario.addActionListener(new java.awt.event.ActionListener() {
+        tfNomeEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tfNomeEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfLoginUsuarioActionPerformed(evt);
+                tfNomeEstabelecimentoActionPerformed(evt);
             }
         });
 
@@ -115,7 +115,7 @@ public class TelaPesquisaEstabelecimento extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tfLoginUsuario)
+                .addComponent(tfNomeEstabelecimento)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -145,7 +145,7 @@ public class TelaPesquisaEstabelecimento extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(tfLoginUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfNomeEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
@@ -161,9 +161,9 @@ public class TelaPesquisaEstabelecimento extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfLoginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLoginUsuarioActionPerformed
+    private void tfNomeEstabelecimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeEstabelecimentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfLoginUsuarioActionPerformed
+    }//GEN-LAST:event_tfNomeEstabelecimentoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
          int linha = tabelaEstabelecimento.getSelectedRow();
@@ -248,6 +248,6 @@ public class TelaPesquisaEstabelecimento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabelaEstabelecimento;
-    private javax.swing.JTextField tfLoginUsuario;
+    private javax.swing.JTextField tfNomeEstabelecimento;
     // End of variables declaration//GEN-END:variables
 }

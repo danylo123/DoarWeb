@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 /**
  *
@@ -18,25 +19,40 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class Usuario {
-    
+
     @Id
     @GeneratedValue
     private int idUsuario;
-    
+
     @Column(length = 50, nullable = false)
     private String nomeUsuario;
-    
+
     @Column(length = 11, nullable = false)
     private String cpfUsuario;
-    
+
     @Column(length = 50, nullable = false)
     private String emailUsuario;
-    
+
     @Column(length = 20, nullable = false)
     private String senhaUsuario;
-    
+
+    @Transient
+    private static Usuario usuario;
+
     @OneToOne
     private Estabelecimento estabelecimento;
+
+    public static Usuario getInstance() {
+        if (usuario == null) {
+            usuario = new Usuario();
+        }
+
+        return usuario;
+    }
+
+    public static void setUsuario(Usuario usuario) {
+        Usuario.usuario = usuario;
+    }
 
     /**
      * @return the idUsuario
@@ -121,5 +137,5 @@ public class Usuario {
     public void setEstabelecimento(Estabelecimento estabelecimento) {
         this.estabelecimento = estabelecimento;
     }
-                   
+
 }

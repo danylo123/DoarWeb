@@ -9,7 +9,7 @@ import usuario.Usuario;
 public class UsuarioTableModel extends AbstractTableModel {
 
     private List<Usuario> usuarios = new ArrayList<>();
-    private String[] colunas = {"Nome", "CPF", "E-mail", "Estabelecimento"};
+    private String[] colunas = {"Código", "Nome", "CPF", "E-mail", "Estabelecimento"};
 
     public UsuarioTableModel(List<Usuario> usuarios) {
         this.usuarios = usuarios;
@@ -30,13 +30,15 @@ public class UsuarioTableModel extends AbstractTableModel {
         Usuario usuario = usuarios.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return usuario.getNomeUsuario();
+                return usuario.getIdUsuario();
             case 1:
-                return usuario.getCpfUsuario();
+                return usuario.getNomeUsuario();
             case 2:
-                return usuario.getEmailUsuario();
+                return usuario.getCpfUsuario();
             case 3:
-                return usuario.getEstabelecimento().getNomeEstabelecimento();            
+                return usuario.getEmailUsuario();
+            case 4:
+                return usuario.getEstabelecimento().getNomeEstabelecimento();
         }
         return null;
     }
@@ -50,7 +52,9 @@ public class UsuarioTableModel extends AbstractTableModel {
             case 2:
                 return colunas[2];
             case 3:
-                return colunas[3];            
+                return colunas[3];
+            case 4:
+                return colunas[4];
         }
         return null;
     }

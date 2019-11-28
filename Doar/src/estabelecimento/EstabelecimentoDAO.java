@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
+import usuario.Usuario;
 import util.HibernateUtil;
 
 /**
@@ -29,9 +30,25 @@ public class EstabelecimentoDAO {
             sessao.save(estabelecimento); //Salvar no banco
             JOptionPane.showMessageDialog(null, "Estabelecimento cadastrado com sucesso!");
         } else {
-            //editar(estabelecimento);
-            //JOptionPane.showMessageDialog(null, "Estabelecimento editado com sucesso!");
+            editar(estabelecimento);
+            JOptionPane.showMessageDialog(null, "Estabelecimento editado com sucesso!");
         }
+        transacao.commit(); //Executar a ação no banco
+        sessao.close(); //Fechar a conexão com o banco
+    }
+
+    public void excluir(Estabelecimento estabelecimento) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
+        sessao.delete(estabelecimento); //Exclui do banco
+        transacao.commit(); //Executar a ação no banco
+        sessao.close(); //Fechar a conexão com o banco
+    }
+
+    public void editar(Estabelecimento estabelecimento) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
+        sessao.update(estabelecimento); //Atualiza do banco
         transacao.commit(); //Executar a ação no banco
         sessao.close(); //Fechar a conexão com o banco
     }

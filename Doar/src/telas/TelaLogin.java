@@ -5,17 +5,24 @@
  */
 package telas;
 
+import javax.swing.JOptionPane;
+import usuario.Usuario;
+import usuario.UsuarioDAO;
+
 /**
  *
  * @author Danylo
  */
 public class TelaLogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaUsuario
-     */
+    Usuario usuario;
+    UsuarioDAO dao;
+
     public TelaLogin() {
         initComponents();
+
+        usuario = new Usuario();
+        dao = new UsuarioDAO();
     }
 
     /**
@@ -54,7 +61,6 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setText("Doar Web - Login");
 
-        tfCpfUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         tfCpfUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCpfUsuarioActionPerformed(evt);
@@ -75,9 +81,9 @@ public class TelaLogin extends javax.swing.JFrame {
                                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfSenhaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfCpfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tfSenhaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                                    .addComponent(tfCpfUsuario)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
                                 .addComponent(jLabel2))))
@@ -91,7 +97,7 @@ public class TelaLogin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(tfCpfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -109,7 +115,19 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        
+        if (!tfCpfUsuario.getText().isEmpty() && !tfSenhaUsuario.getText().isEmpty()) {
+
+            usuario = dao.autenticarUsuario(tfCpfUsuario.getText(), tfSenhaUsuario.getText());
+
+            if (usuario != null) {
+                Usuario.setUsuario(usuario);
+                MenuPrincipal menu = new MenuPrincipal(Usuario.getInstance());
+                menu.setVisible(true);
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Dados inválidos!");
+            }
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void tfCpfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCpfUsuarioActionPerformed

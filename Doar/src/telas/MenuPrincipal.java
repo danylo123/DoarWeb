@@ -5,17 +5,21 @@
  */
 package telas;
 
+import usuario.Usuario;
+
 /**
  *
  * @author Danylo
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
+    Usuario usuario;
     /**
      * Creates new form TelaUsuario
      */
-    public MenuPrincipal() {
+    public MenuPrincipal(Usuario usuario) {
         initComponents();
+        this.usuario = usuario;
     }
 
     /**
@@ -32,9 +36,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jmUsuario = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jmUsuario1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jmUsuario2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -65,26 +66,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Listar");
-
-        jmUsuario1.setText("Usuário");
-        jmUsuario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmUsuario1ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jmUsuario1);
-
-        jMenuItem2.setText("Estabelecimento");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem2);
-
-        jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Doações");
 
@@ -144,23 +125,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jmUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuarioActionPerformed
         TelaUsuario tela = new TelaUsuario();
         tela.setVisible(true);
+       
     }//GEN-LAST:event_jmUsuarioActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         TelaEstabelecimento tela = new TelaEstabelecimento();
         tela.setVisible(true);
+       
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jmUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuario1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jmUsuario1ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void jmUsuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuario2ActionPerformed
-        // TODO add your handling code here:
+        TelaDoacao tela = new TelaDoacao();
+        tela.setVisible(true);
+        
     }//GEN-LAST:event_jmUsuario2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -204,7 +181,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuPrincipal().setVisible(true);
+                new MenuPrincipal(null).setVisible(true);
             }
         });
     }
@@ -212,15 +189,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jmUsuario;
-    private javax.swing.JMenuItem jmUsuario1;
     private javax.swing.JMenuItem jmUsuario2;
     private javax.swing.JMenuItem jmUsuario3;
     // End of variables declaration//GEN-END:variables
