@@ -1,18 +1,16 @@
-package doacao;
+package relatorio;
 
-import doacao.*;
 import doacao.*;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import doacao.Doacao;
 
-public class DoacaoTableModel extends AbstractTableModel {
+public class DoacaoRecebidaTableModel extends AbstractTableModel {
 
     private List<Doacao> doacaos = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Data Recebimento", "Data Enetrega", "Doado?"};
+    private String[] colunas = {"Código", "Nome", "Data Recebimento", "Doado?"};
 
-    public DoacaoTableModel(List<Doacao> doacaos) {
+    public DoacaoRecebidaTableModel(List<Doacao> doacaos) {
         this.doacaos = doacaos;
     }
 
@@ -35,10 +33,8 @@ public class DoacaoTableModel extends AbstractTableModel {
             case 1:
                 return doacao.getNomeDoacao();
             case 2:
-                return doacao.getDataEntrada();
+                return doacao.getDataEntrada();     
             case 3:
-                return doacao.getDataSaida();
-            case 4:
                 return doacao.getStatusDoacao();
 
         }
@@ -55,8 +51,6 @@ public class DoacaoTableModel extends AbstractTableModel {
                 return colunas[2];
             case 3:
                 return colunas[3];
-            case 4:
-                return colunas[4];
 
         }
         return null;

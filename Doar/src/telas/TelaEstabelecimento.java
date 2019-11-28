@@ -253,7 +253,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         TelaPesquisaEstabelecimento tela = new TelaPesquisaEstabelecimento();
-        this.setVisible(true);
+        tela.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 

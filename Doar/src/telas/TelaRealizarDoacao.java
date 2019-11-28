@@ -5,29 +5,28 @@
  */
 package telas;
 
-import doacao.Doacao;
-import doacao.DoacaoDAO;
-import doacao.DoacaoTableModel;
 import javax.swing.JOptionPane;
 import doacao.Doacao;
 import doacao.DoacaoDAO;
 import doacao.DoacaoTableModel;
+import java.util.Date;
+import usuario.Usuario;
 
 /**
  *
- * @author LABORATORIO 01
+ * @author Danylo Aquino
  */
 public class TelaRealizarDoacao extends javax.swing.JFrame {
 
     Doacao doacao = new Doacao();
     DoacaoDAO dao = new DoacaoDAO();
-    
+
     public TelaRealizarDoacao() {
         initComponents();
         atualizarTabela();
     }
-    
-    public void atualizarTabela(){
+
+    public void atualizarTabela() {
         DoacaoTableModel tm = new DoacaoTableModel(dao.listarDoacaos());
         tabelaDoacao.setModel(tm);
     }
@@ -155,21 +154,31 @@ public class TelaRealizarDoacao extends javax.swing.JFrame {
     }//GEN-LAST:event_tfNomeEstabelecimentoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         int linha = tabelaDoacao.getSelectedRow();
-       if(linha == -1){
-           JOptionPane.showMessageDialog(null, "Selecione uma linha!");
-       }else{
-           doacao = dao.pesquisar((int) tabelaDoacao.getValueAt(linha, 0));
-           TelaDoacao tela = new TelaDoacao();
-           tela.doacao = doacao;
-           tela.preencherDoacao();
-           tela.setVisible(true);
-           dispose();
-       }
+        int linha = tabelaDoacao.getSelectedRow();
+        if (linha == -1) {
+            JOptionPane.showMessageDialog(null, "Selecione uma linha!");
+        } else {
+
+            doacao = dao.pesquisar((int) tabelaDoacao.getValueAt(linha, 0));
+
+            if (doacao.getStatusDoacao().equals("Não")) {
+
+                doacao.setDataSaida(new Date());
+                doacao.setStatusDoacao("Sim");
+                dao.editar(doacao);
+
+                JOptionPane.showMessageDialog(null, "Doação realizada!");
+                
+                atualizarTabela();
+            }else{
+                JOptionPane.showMessageDialog(null, "Este produto já foi doado!");
+            }
+
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        TelaDoacao tela = new TelaDoacao(); // Instancia a classe
+        MenuPrincipal tela = new MenuPrincipal(Usuario.getInstance()); // Instancia a classe
         tela.setVisible(true); // Deixa a tela visivel
         dispose(); // Fecha a tela atual
     }//GEN-LAST:event_jButton4ActionPerformed

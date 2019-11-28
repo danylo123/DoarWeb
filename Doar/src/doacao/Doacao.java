@@ -41,8 +41,8 @@ public class Doacao {
     @Column
     private Date dataSaida;
     
-    @Column(length = 1, nullable = false)
-    private int statusDoacao;
+    @Column(length = 4, nullable = false)
+    private String statusDoacao;
     
     @OneToOne
     private Usuario usuario;
@@ -134,14 +134,14 @@ public class Doacao {
     /**
      * @return the statusDoacao
      */
-    public int getStatusDoacao() {
+    public String getStatusDoacao() {
         return statusDoacao;
     }
 
     /**
      * @param statusDoacao the statusDoacao to set
      */
-    public void setStatusDoacao(int statusDoacao) {
+    public void setStatusDoacao(String statusDoacao) {
         this.statusDoacao = statusDoacao;
     }
 

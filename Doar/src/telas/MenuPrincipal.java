@@ -141,7 +141,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmUsuario2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        TelaRealizarDoacao tela = new TelaRealizarDoacao();
+        tela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jmUsuario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuario3ActionPerformed
