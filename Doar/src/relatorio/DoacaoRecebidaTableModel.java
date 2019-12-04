@@ -8,7 +8,7 @@ import javax.swing.table.AbstractTableModel;
 public class DoacaoRecebidaTableModel extends AbstractTableModel {
 
     private List<Doacao> doacaos = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Data Recebimento", "Doado?"};
+    private String[] colunas = {"Código", "Nome", "Data Recebimento", "Local de recebimento"};
 
     public DoacaoRecebidaTableModel(List<Doacao> doacaos) {
         this.doacaos = doacaos;
@@ -33,9 +33,9 @@ public class DoacaoRecebidaTableModel extends AbstractTableModel {
             case 1:
                 return doacao.getNomeDoacao();
             case 2:
-                return doacao.getDataEntrada();     
+                return doacao.getDataEntrada();
             case 3:
-                return doacao.getStatusDoacao();
+                return doacao.getUsuario().getEstabelecimento().getNomeEstabelecimento();
 
         }
         return null;

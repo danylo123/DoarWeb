@@ -6,9 +6,9 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 public class DoacaoRealizadaTableModel extends AbstractTableModel {
-    
+
     private List<Doacao> doacaos = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Data Enetrega"};
+    private String[] colunas = {"Código", "Nome", "Data Enetrega", "Local entrega"};
 
     public DoacaoRealizadaTableModel(List<Doacao> doacaos) {
         this.doacaos = doacaos;
@@ -31,10 +31,12 @@ public class DoacaoRealizadaTableModel extends AbstractTableModel {
             case 0:
                 return doacao.getIdDoacao();
             case 1:
-                return doacao.getNomeDoacao();           
+                return doacao.getNomeDoacao();
             case 2:
                 return doacao.getDataSaida();
-           
+            case 3:
+                return doacao.getUsuario().getEstabelecimento().getNomeEstabelecimento();
+
         }
         return null;
     }
@@ -46,7 +48,9 @@ public class DoacaoRealizadaTableModel extends AbstractTableModel {
             case 1:
                 return colunas[1];
             case 2:
-                return colunas[2];            
+                return colunas[2];
+            case 3:
+                return colunas[3];
         }
         return null;
     }

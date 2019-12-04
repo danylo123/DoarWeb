@@ -57,10 +57,18 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jmUsuario3">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Doa&#xe7;&#xf5;es"/>
+                <Property name="text" type="java.lang.String" value="Doa&#xe7;&#xf5;es realizadas"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmUsuario3ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmUsuario4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Doa&#xe7;&#xf5;es recebidas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmUsuario4ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

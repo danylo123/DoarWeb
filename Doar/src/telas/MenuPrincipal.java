@@ -14,6 +14,7 @@ import usuario.Usuario;
 public class MenuPrincipal extends javax.swing.JFrame {
 
     Usuario usuario;
+
     /**
      * Creates new form TelaUsuario
      */
@@ -41,6 +42,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jmUsuario3 = new javax.swing.JMenuItem();
+        jmUsuario4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,13 +91,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenu4.setText("Relatório");
 
-        jmUsuario3.setText("Doações");
+        jmUsuario3.setText("Doações realizadas");
         jmUsuario3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmUsuario3ActionPerformed(evt);
             }
         });
         jMenu4.add(jmUsuario3);
+
+        jmUsuario4.setText("Doações recebidas");
+        jmUsuario4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmUsuario4ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jmUsuario4);
 
         jMenuBar1.add(jMenu4);
 
@@ -125,19 +135,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jmUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuarioActionPerformed
         TelaUsuario tela = new TelaUsuario();
         tela.setVisible(true);
-       
+
     }//GEN-LAST:event_jmUsuarioActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         TelaEstabelecimento tela = new TelaEstabelecimento();
         tela.setVisible(true);
-       
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jmUsuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuario2ActionPerformed
         TelaDoacao tela = new TelaDoacao();
         tela.setVisible(true);
-        
+
     }//GEN-LAST:event_jmUsuario2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -147,8 +157,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jmUsuario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuario3ActionPerformed
-        // TODO add your handling code here:
+        TelaRelatorioEntregaDoacao tela = new TelaRelatorioEntregaDoacao();
+        tela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jmUsuario3ActionPerformed
+
+    private void jmUsuario4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuario4ActionPerformed
+        TelaRelatorioRecebimentoDoacao tela = new TelaRelatorioRecebimentoDoacao();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jmUsuario4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,5 +217,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmUsuario;
     private javax.swing.JMenuItem jmUsuario2;
     private javax.swing.JMenuItem jmUsuario3;
+    private javax.swing.JMenuItem jmUsuario4;
     // End of variables declaration//GEN-END:variables
 }
