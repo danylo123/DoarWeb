@@ -66,27 +66,58 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
         tfNumeroEstabelecimento = new javax.swing.JTextField();
         tfBairroEstabelecimento = new javax.swing.JTextField();
         tfCidadeEstabelecimento = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tfNomeEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tfNomeEstabelecimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tfNomeEstabelecimento.setMinimumSize(null);
         tfNomeEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNomeEstabelecimentoActionPerformed(evt);
             }
         });
+        getContentPane().add(tfNomeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 256, -1));
+        tfNomeEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nome:");
+        jLabel3.setAlignmentX(50.0F);
+        jLabel3.setAlignmentY(100.0F);
+        jLabel3.setAutoscrolls(true);
+        jLabel3.setPreferredSize(null);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, -1));
+        jLabel3.getAccessibleContext().setAccessibleDescription("");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Rua:");
+        jLabel4.setAlignmentX(50.0F);
+        jLabel4.setAlignmentY(100.0F);
+        jLabel4.setAutoscrolls(true);
+        jLabel4.setPreferredSize(null);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+        jLabel4.getAccessibleContext().setAccessibleDescription("");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Bairro:");
+        jLabel5.setAlignmentX(50.0F);
+        jLabel5.setAlignmentY(100.0F);
+        jLabel5.setAutoscrolls(true);
+        jLabel5.setPreferredSize(null);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
+        jLabel5.getAccessibleContext().setAccessibleDescription("");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Número:");
+        jLabel6.setAlignmentX(50.0F);
+        jLabel6.setAlignmentY(100.0F);
+        jLabel6.setAutoscrolls(true);
+        jLabel6.setPreferredSize(null);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
+        jLabel6.getAccessibleContext().setAccessibleDescription("");
 
         jButton2.setText("Voltar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +125,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, -1, -1));
 
         jButton3.setText("Limpar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +133,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, -1, -1));
 
         jButton4.setText("Salvar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -108,6 +141,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, -1, -1));
 
         jButton5.setText("Pesquisar");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -115,109 +149,72 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Cadastro Estabelecimento");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, 130));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Cidade:");
+        jLabel8.setAlignmentX(50.0F);
+        jLabel8.setAlignmentY(100.0F);
+        jLabel8.setAutoscrolls(true);
+        jLabel8.setPreferredSize(null);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
+        jLabel8.getAccessibleContext().setAccessibleDescription("");
 
         tfRuaEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tfRuaEstabelecimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tfRuaEstabelecimento.setMinimumSize(null);
         tfRuaEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfRuaEstabelecimentoActionPerformed(evt);
             }
         });
+        getContentPane().add(tfRuaEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 256, -1));
+        tfRuaEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         tfNumeroEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tfNumeroEstabelecimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tfNumeroEstabelecimento.setMinimumSize(null);
         tfNumeroEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNumeroEstabelecimentoActionPerformed(evt);
             }
         });
+        getContentPane().add(tfNumeroEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 256, -1));
+        tfNumeroEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         tfBairroEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tfBairroEstabelecimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tfBairroEstabelecimento.setMinimumSize(null);
         tfBairroEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfBairroEstabelecimentoActionPerformed(evt);
             }
         });
+        getContentPane().add(tfBairroEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 256, -1));
+        tfBairroEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         tfCidadeEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tfCidadeEstabelecimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tfCidadeEstabelecimento.setMinimumSize(null);
         tfCidadeEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCidadeEstabelecimentoActionPerformed(evt);
             }
         });
+        getContentPane().add(tfCidadeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 256, -1));
+        tfCidadeEstabelecimento.getAccessibleContext().setAccessibleName("");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(jButton2)
-                        .addGap(41, 41, 41)
-                        .addComponent(jButton3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfNomeEstabelecimento)
-                            .addComponent(tfRuaEstabelecimento)
-                            .addComponent(tfNumeroEstabelecimento)
-                            .addComponent(tfBairroEstabelecimento)
-                            .addComponent(tfCidadeEstabelecimento))))
-                .addGap(121, 121, 121))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfNomeEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(tfRuaEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(tfNumeroEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(tfBairroEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(tfCidadeEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addGap(41, 41, 41))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jLabel1.setAlignmentX(50.0F);
+        jLabel1.setAlignmentY(100.0F);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, -1));
+
+        getAccessibleContext().setAccessibleDescription("");
 
         pack();
         setLocationRelativeTo(null);
@@ -314,6 +311,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
