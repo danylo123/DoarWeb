@@ -79,7 +79,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 tfNomeEstabelecimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(tfNomeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 256, -1));
+        getContentPane().add(tfNomeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 256, -1));
         tfNomeEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -88,7 +88,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
         jLabel3.setAlignmentY(100.0F);
         jLabel3.setAutoscrolls(true);
         jLabel3.setPreferredSize(null);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, -1, -1));
         jLabel3.getAccessibleContext().setAccessibleDescription("");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -97,7 +97,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
         jLabel4.setAlignmentY(100.0F);
         jLabel4.setAutoscrolls(true);
         jLabel4.setPreferredSize(null);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
         jLabel4.getAccessibleContext().setAccessibleDescription("");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -106,7 +106,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
         jLabel5.setAlignmentY(100.0F);
         jLabel5.setAutoscrolls(true);
         jLabel5.setPreferredSize(null);
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
         jLabel5.getAccessibleContext().setAccessibleDescription("");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -115,7 +115,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
         jLabel6.setAlignmentY(100.0F);
         jLabel6.setAutoscrolls(true);
         jLabel6.setPreferredSize(null);
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
         jLabel6.getAccessibleContext().setAccessibleDescription("");
 
         jButton2.setText("Voltar");
@@ -160,7 +160,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
         jLabel8.setAlignmentY(100.0F);
         jLabel8.setAutoscrolls(true);
         jLabel8.setPreferredSize(null);
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
         jLabel8.getAccessibleContext().setAccessibleDescription("");
 
         tfRuaEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -171,7 +171,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 tfRuaEstabelecimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(tfRuaEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 256, -1));
+        getContentPane().add(tfRuaEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 256, -1));
         tfRuaEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         tfNumeroEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -182,7 +182,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 tfNumeroEstabelecimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(tfNumeroEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 256, -1));
+        getContentPane().add(tfNumeroEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 256, -1));
         tfNumeroEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         tfBairroEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -193,7 +193,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 tfBairroEstabelecimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(tfBairroEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 256, -1));
+        getContentPane().add(tfBairroEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 256, -1));
         tfBairroEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         tfCidadeEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -204,7 +204,7 @@ public class TelaEstabelecimento extends javax.swing.JFrame {
                 tfCidadeEstabelecimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(tfCidadeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 256, -1));
+        getContentPane().add(tfCidadeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 256, -1));
         tfCidadeEstabelecimento.getAccessibleContext().setAccessibleName("");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.png"))); // NOI18N

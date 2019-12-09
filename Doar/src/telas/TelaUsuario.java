@@ -84,10 +84,10 @@ public class TelaUsuario extends javax.swing.JFrame {
                 tfNomeUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(tfNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 239, -1));
+        getContentPane().add(tfNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 239, -1));
 
         tfSenhaUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        getContentPane().add(tfSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 470, 240, -1));
+        getContentPane().add(tfSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 240, -1));
 
         tfNomeEstabelecimento.setEditable(false);
         tfNomeEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -97,7 +97,7 @@ public class TelaUsuario extends javax.swing.JFrame {
                 tfNomeEstabelecimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(tfNomeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 240, -1));
+        getContentPane().add(tfNomeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, 240, -1));
 
         jButton1.setText("Selecionar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -105,27 +105,27 @@ public class TelaUsuario extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nome:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("CPF:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Senha:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("E-mail:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Estabelecimento:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, -1, -1));
 
         jButton2.setText("Voltar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +133,7 @@ public class TelaUsuario extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 660, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, -1, -1));
 
         jButton3.setText("Limpar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +141,7 @@ public class TelaUsuario extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 660, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, -1, -1));
 
         jButton4.setText("Salvar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +149,7 @@ public class TelaUsuario extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 660, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, -1, -1));
 
         jButton5.setText("Pesquisar");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -157,11 +157,11 @@ public class TelaUsuario extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 660, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Cadastro Usuário");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 210, 31));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 210, 31));
 
         tfEmailUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         tfEmailUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +169,7 @@ public class TelaUsuario extends javax.swing.JFrame {
                 tfEmailUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(tfEmailUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 239, -1));
+        getContentPane().add(tfEmailUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 239, -1));
 
         tfCpfUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         tfCpfUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -177,10 +177,10 @@ public class TelaUsuario extends javax.swing.JFrame {
                 tfCpfUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(tfCpfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 239, -1));
+        getContentPane().add(tfCpfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 239, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo Novo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 780));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
 
         pack();
         setLocationRelativeTo(null);

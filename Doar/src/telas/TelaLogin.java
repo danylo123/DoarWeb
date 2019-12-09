@@ -57,15 +57,15 @@ public class TelaLogin extends javax.swing.JFrame {
                 tfSenhaUsuarioKeyPressed(evt);
             }
         });
-        getContentPane().add(tfSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 240, -1));
+        getContentPane().add(tfSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 240, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Senha:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("CPF:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
         btEntrar.setText("Entrar");
         btEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +78,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 btEntrarKeyPressed(evt);
             }
         });
-        getContentPane().add(btEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 133, -1));
+        getContentPane().add(btEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 133, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setText("Login");
@@ -94,7 +94,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 tfCpfUsuarioKeyPressed(evt);
             }
         });
-        getContentPane().add(tfCpfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 240, -1));
+        getContentPane().add(tfCpfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 240, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.png"))); // NOI18N
         jLabel3.setText("jLabel3");

@@ -60,7 +60,7 @@ public class TelaRelatorioEntregaDoacao extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nome:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
         tfNomeEstabelecimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         tfNomeEstabelecimento.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +68,7 @@ public class TelaRelatorioEntregaDoacao extends javax.swing.JFrame {
                 tfNomeEstabelecimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(tfNomeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 387, -1));
+        getContentPane().add(tfNomeEstabelecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 340, -1));
 
         jButton1.setText("Pesquisar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class TelaRelatorioEntregaDoacao extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
 
         tabelaDoacao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -91,11 +91,11 @@ public class TelaRelatorioEntregaDoacao extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelaDoacao);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 780, 250));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 500, 160));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Doações realizadas");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 380, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 230, -1));
 
         jButton4.setText("Voltar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -103,10 +103,10 @@ public class TelaRelatorioEntregaDoacao extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 680, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo Novo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);

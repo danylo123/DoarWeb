@@ -61,7 +61,7 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Vincular Estabelecimento");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 310, 31));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 310, 31));
 
         tabelaEstabelecimento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -81,7 +81,7 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaEstabelecimento);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 780, 250));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 500, 200));
 
         btSelecionar.setText("Selecionar");
         btSelecionar.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +89,7 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
                 btSelecionarActionPerformed(evt);
             }
         });
-        getContentPane().add(btSelecionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 710, -1, -1));
+        getContentPane().add(btSelecionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, -1, -1));
 
         jButton4.setText("Voltar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -97,10 +97,10 @@ public class TelaVincularEstabelecimento extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 710, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo Novo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 780));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
 
         pack();
         setLocationRelativeTo(null);
