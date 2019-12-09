@@ -17,6 +17,7 @@ import util.HibernateUtil;
  * @author Danylo
  */
 public class UsuarioDAO {
+
     private Session sessao;
     private Transaction transacao;
 
@@ -66,12 +67,20 @@ public class UsuarioDAO {
         return usuario;
     }
 
-     public Usuario autenticarUsuario(String cpfUsuario, String senhaUsuario) {
+    public Usuario autenticarUsuario(String cpfUsuario, String senhaUsuario) {
         sessao = HibernateUtil.getSessionFactory().openSession();
         transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
         Usuario usuario = (Usuario) sessao.createCriteria(Usuario.class).add(Restrictions.eq("cpfUsuario", cpfUsuario)).add(Restrictions.eq("senhaUsuario", senhaUsuario)).uniqueResult();
         sessao.close();
-        
+
         return usuario != null ? usuario : null;
-    } 
+    }
+
+    public List<Usuario> pesquisarLista(String campo, String valor) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
+        List<Usuario> usuario = sessao.createCriteria(Usuario.class).add(Restrictions.ilike(campo, "%" + valor + "%")).list();
+        sessao.close();
+        return usuario;
+    }
 }

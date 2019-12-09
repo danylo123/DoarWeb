@@ -53,8 +53,8 @@ public class DoacaoDAO {
         sessao.close();
         return doacao;
     }
-    
-     public List<Doacao> pesquisarRelatorio(String statusDoacao) {
+
+    public List<Doacao> pesquisarRelatorio(String statusDoacao) {
         sessao = HibernateUtil.getSessionFactory().openSession();
         transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
         List<Doacao> doacao = sessao.createCriteria(Doacao.class).add(Restrictions.eq("statusDoacao", statusDoacao)).list();
@@ -66,6 +66,14 @@ public class DoacaoDAO {
         sessao = HibernateUtil.getSessionFactory().openSession();
         transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
         List<Doacao> doacao = sessao.createCriteria(Doacao.class).list();
+        sessao.close();
+        return doacao;
+    }
+
+    public List<Doacao> pesquisarLista(String campo, String valor) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
+        List<Doacao> doacao = sessao.createCriteria(Doacao.class).add(Restrictions.ilike(campo, "%" + valor + "%")).list();
         sessao.close();
         return doacao;
     }

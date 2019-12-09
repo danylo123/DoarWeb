@@ -68,5 +68,13 @@ public class EstabelecimentoDAO {
         sessao.close();
         return estabelecimentos;
     }
+    
+    public List<Estabelecimento> pesquisar(String campo, String valor){
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction(); //Preparar a sessão para inserir no banco
+        List<Estabelecimento> estabelecimento = sessao.createCriteria(Estabelecimento.class).add(Restrictions.ilike(campo, "%"+valor+"%")).list();
+        sessao.close();
+        return estabelecimento;
+    }
 
 }
