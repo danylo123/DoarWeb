@@ -10,7 +10,7 @@ import doacao.Doacao;
 public class DoacaoTableModel extends AbstractTableModel {
 
     private List<Doacao> doacaos = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Data Recebimento", "Data Enetrega", "Doado?"};
+    private String[] colunas = {"Código", "Nome", "Data Recebimento", "Data Enetrega"};
 
     public DoacaoTableModel(List<Doacao> doacaos) {
         this.doacaos = doacaos;
@@ -38,9 +38,7 @@ public class DoacaoTableModel extends AbstractTableModel {
                 return doacao.getDataEntrada();
             case 3:
                 return doacao.getDataSaida();
-            case 4:
-                return doacao.getStatusDoacao();
-
+           
         }
         return null;
     }
@@ -55,9 +53,7 @@ public class DoacaoTableModel extends AbstractTableModel {
                 return colunas[2];
             case 3:
                 return colunas[3];
-            case 4:
-                return colunas[4];
-
+           
         }
         return null;
     }
